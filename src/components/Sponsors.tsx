@@ -1,20 +1,20 @@
 export function Sponsors() {
   const sponsors = [
-    { id: 1, name: "Construction Corp" },
-    { id: 2, name: "Engineering Solutions" },
-    { id: 3, name: "BuildTech" },
-    { id: 4, name: "Infrastructure Group" },
-    { id: 5, name: "Urban Design Co" },
-    { id: 6, name: "Concrete Industries" },
-    { id: 7, name: "Steel Structures Ltd" },
-    { id: 8, name: "Sustainable Build" },
+    { id: 1, name: "Hassania School of Public Works" },
+    { id: 2, name: "Welearn" },
+    { id: 3, name: "Casapress" },
+    { id: 4, name: "Elaouad architecture" },
+    { id: 5, name: "Hit radio" },
+    { id: 6, name: "Avon" },
+    { id: 7, name: "BTP news " },
+    
   ];
 
   return (
     <section id="sponsors" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl mb-4">Our Partners</h2>
+          <h2 className="text-4xl sm:text-5xl mb-4">Our old  Partners</h2>
           <div className="w-24 h-1 bg-[#FFB700] mx-auto mb-8"></div>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto">
             We're proud to partner with leading companies in the civil engineering and construction industry.

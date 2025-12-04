@@ -5,24 +5,24 @@ import { Link } from "react-router-dom";
 export function Projects() {
   const projects = [
     {
-      id: 1,
-      title: "Bridge Design Competition",
-      description: "Annual competition where students design and model sustainable bridge structures.",
-      category: "Competition",
-    },
-    {
-      id: 2,
-      title: "Urban Planning Initiative",
-      description: "Collaborative project analyzing urban development challenges in Casablanca.",
-      category: "Research",
-    },
-    {
-      id: 3,
-      title: "Construction Tech Showcase",
-      description: "Exhibition of latest construction technologies and sustainable building methods.",
-      category: "Exhibition",
-    },
-  ];
+    id: 1,
+    title: "Coming Soon",
+    description: "Details will be available soon.",
+    category: "Competition",
+  },
+  {
+    id: 2,
+    title: "Coming Soon",
+    description: "Details will be available soon.",
+    category: "Research",
+  },
+  {
+    id: 3,
+    title: "Coming Soon",
+    description: "Details will be available soon.",
+    category: "Exhibition",
+  },
+];
 
   return (
     <section id="projects" className="py-20 bg-white">

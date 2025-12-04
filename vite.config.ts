@@ -4,6 +4,7 @@
   import path from 'path';
 
   export default defineConfig({
+    base: "./",
     plugins: [react()],
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
@@ -50,9 +51,9 @@
       },
     },
     build: {
-      target: 'esnext',
-      outDir: 'build',
-    },
+    outDir: "build", // make sure this matches your deploy script
+  },
+
     server: {
       port: 3000,
       open: true,
