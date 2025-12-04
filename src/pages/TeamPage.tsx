@@ -2,63 +2,65 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../co
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { Badge } from "../components/ui/badge";
 import { Mail, Linkedin } from "lucide-react";
+import fatimaImg from "../assets/fatima.jpg";
 
 export default function TeamPage() {
   const executiveBoard = [
     {
-      name: "Yassine El Mansouri",
+      name: "Fatima Ezzahrae Mahzoume ",
       role: "President",
-      department: "5th Year - Structural Engineering",
+      department: "2th year - Civil Engineering ",
       bio: "Leading the club's vision to connect students with industry opportunities.",
-      image: "https://images.unsplash.com/photo-1666558889375-798fa96b559a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbmdpbmVlcmluZyUyMHRlYW0lMjBzdHVkZW50c3xlbnwxfHx8fDE3NTk5MjM5NDR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+      image:fatimaImg
     },
     {
-      name: "Salma Benkirane",
+      name: "Hind Amzil",
       role: "Vice President",
-      department: "4th Year - Transportation Engineering",
+      department: "42th year - Civil Engineering",
       bio: "Coordinating events and ensuring smooth club operations.",
       image: "https://images.unsplash.com/photo-1666558889375-798fa96b559a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbmdpbmVlcmluZyUyMHRlYW0lMjBzdHVkZW50c3xlbnwxfHx8fDE3NTk5MjM5NDR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
     },
     {
-      name: "Omar Alaoui",
+      name: "Salma Abbou",
       role: "Secretary General",
-      department: "4th Year - Geotechnical Engineering",
+      department: "2th year - Civil Engineering",
       bio: "Managing communications and documentation.",
       image: "https://images.unsplash.com/photo-1666558889375-798fa96b559a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbmdpbmVlcmluZyUyMHRlYW0lMjBzdHVkZW50c3xlbnwxfHx8fDE3NTk5MjM5NDR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
     },
-    {
-      name: "Imane Zahraoui",
-      role: "Treasurer",
-      department: "3rd Year - Civil Engineering",
-      bio: "Overseeing finances and sponsorship relations.",
-      image: "https://images.unsplash.com/photo-1666558889375-798fa96b559a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbmdpbmVlcmluZyUyMHRlYW0lMjBzdHVkZW50c3xlbnwxfHx8fDE3NTk5MjM5NDR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-    },
+    
+    
   ];
 
   const committees = [
     {
-      name: "Events Committee",
-      head: "Amine Berrada",
-      members: ["Sara El Idrissi", "Hamza Tazi", "Nadia Fahim"],
-      description: "Organizing conferences, workshops, and site visits"
+      name: "Training  Committee",
+      head: "Rajaa Dadda",
+      members: [],
+      description: "Organizing workshops, technical training sessions, and skill-development programs."
     },
     {
-      name: "Technical Committee",
-      head: "Karim Benjelloun",
-      members: ["Fatima Chakir", "Mehdi Lahlou", "Zineb Moussaid"],
-      description: "Managing technical projects and competitions"
+      name: "Sponsoring  Committee",
+      head: "Imad Rejafellah",
+      members: [],
+      description: "Managing sponsorships, partnerships, and financial support for club activities."
     },
     {
-      name: "Communications Committee",
-      head: "Laila Alami",
-      members: ["Youssef Kadiri", "Rim Senhaji", "Ayoub Mansouri"],
-      description: "Social media, marketing, and public relations"
+      name: "Conference Committee",
+      head: "Mariam Sabir ",
+      members: [],
+      description: "Planning conferences, seminars, and expert speaker events."
     },
     {
-      name: "Partnerships Committee",
-      head: "Rachid Bennis",
-      members: ["Siham Azzouzi", "Hassan Boukhari", "Malika Chraibi"],
-      description: "Building relationships with industry partners"
+      name: "Vsit Committee",
+      head: "Hajar Haddioui",
+      members: [],
+      description: "Coordinating industrial visits, company tours, and onsite learning experiences."
+    },
+    {
+      name: "Media and Design  Committee",
+      head: "Aya Rifi ",
+      members: [],
+      description: "Creating visual content, managing social media, and maintaining the club’s brand identity."
     },
   ];
 
@@ -83,7 +85,8 @@ export default function TeamPage() {
               Our leadership team guiding the club's vision and operations
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
             {executiveBoard.map((member, idx) => (
               <Card key={idx} className="text-center hover:shadow-lg transition-shadow">
                 <CardHeader>
