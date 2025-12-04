@@ -7,9 +7,15 @@ import { Calendar } from "lucide-react";
 // Imported images
 import sibImage from "../assets/sib-visit.jpg";
 import conferenceImage from "../assets/conferenceImage.jpg";
-// Default fallback image for items without image yet
-const defaultImage = "https://via.placeholder.com/600x400?text=No+Image+Available";
-
+import robotTraining from "../assets/robotTraining.jpg";
+import victoriaVisit from "../assets/victoriaVisit.jpg";
+import executionPlansTraining from "../assets/executionPlansTraining.jpg";
+import civilEngineeringDay2025 from "../assets/civilEngineeringDay2025.jpg";
+import roundTableGCDay2025 from "../assets/roundTableGCDay2025.jpg";
+import chantierCasablanca2025 from "../assets/chantierCasablanca2025.jpg";
+import cypecadTraining2025 from "../assets/cypecadTraining2025.jpg";
+import portVisit2025 from "../assets/portVisit2025.jpg";
+import waterManagementConf from "../assets/waterManagementConf.jpg";
 export default function GalleryPage() {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
@@ -32,70 +38,87 @@ export default function GalleryPage() {
     description:
       "Le mercredi 4 décembre, le club BTP EHTP a organisé une conférence enrichissante sous le thème « L’innovation en matériaux de construction durables ». Nous exprimons notre profonde gratitude à nos conférenciers, M. Rguig Mustapha, Mme Dialmy Atar et Mme Wiam Samir, pour leurs interventions inspirantes. Leur expertise a mis en lumière les enjeux et les innovations dans le domaine des matériaux de construction. Merci également à tous les participants pour leur présence et leur engagement. BTP EHTP — we build the world 🧡🖤 #btpehtp #ecolehassaniadestravauxpublics #conférence",
   },
-
+{
+    id: 3,
+    title: "Formation Robot Structural Analysis",
+    category: "Formations",
+    date: "Novembre 2024",
+    image: robotTraining,
+    description:
+      "Le Club BTP EHTP a organisé une formation enrichissante sur le logiciel Robot Structural Analysis, animée par M. LAMRABT El Mahdi. Cette session a offert aux participants l’occasion de maîtriser les fonctionnalités avancées de cet outil essentiel pour l’analyse et la conception de structures. Un grand merci au formateur pour son partage de connaissances et à tous les participants pour leur engagement.\n\n#btpehtp #formation #RobotStructuralAnalysis",
+  },
     {
-      id: 3,
-      title: "Annual Engineering Conference",
-      category: "Conferences",
-      date: "January 2025",
-      image: defaultImage,
-      description:
-        "Industry experts and students gathered for our annual conference discussing the future of civil engineering in Morocco.",
-    },
+  id: 4,
+  title: "Visite de chantier – École Victoria, Bouskoura",
+  category: "Visites de chantier",
+  date: "18 Décembre 2024",
+  image: victoriaVisit,
+  description:
+    "Le Club BTP EHTP a organisé une visite au chantier de construction d’une école à Victoria, Bouskoura, le 18 décembre 2024, sous la supervision de BH4C et guidée par M. Mohamed Hamza Benomar. Une expérience enrichissante qui rapproche nos membres des réalités du terrain.\n\n#btpehtp #chantier #GénieCivil",
+},
     {
-      id: 4,
-      title: "Highway Construction Visit",
-      category: "Site Visits",
-      date: "December 2024",
-      image: defaultImage,
-      description:
-        "Field trip to observe highway construction methods and traffic management systems.",
-    },
+  id: 5,
+  title: "Formation : Analyse d’un dossier de bâtiment",
+  category: "Formations",
+  date: "20 Décembre 2024",
+  image: executionPlansTraining,
+  description:
+    "Le 20 décembre 2024, le Club BTP EHTP a organisé une formation captivante sous le thème : « Des plans architecturaux aux plans d’exécution : Tout ce qu’un ingénieur doit savoir pour analyser un dossier de bâtiment ». Un grand merci à Monsieur Zerriq Brahim pour son intervention inspirante et à tous les participants pour leur énergie et enthousiasme. BTP EHTP — we build the world 🖤🧡\n\n#btpehtp #FormationBTP #Ingénierie #Construction",
+},
+{
+  id: 6,
+  title: "Journée du Génie Civil – Édition 2025",
+  category: "Événements",
+  date: "19 Février 2025",
+  image: civilEngineeringDay2025,
+  description:
+    "Le 19 février 2025, la communauté du génie civil s'est réunie pour une journée exceptionnelle organisée par BTP EHTP. L’événement a permis d’échanger, d’apprendre et de renforcer les liens entre étudiants, professionnels et passionnés du secteur. Une journée marquée par le partage de connaissances, l’innovation et la passion pour la construction et les grands projets d’infrastructure.\nUn immense merci à tous les intervenants, participants et organisateurs pour leur contribution au succès de cette édition.\n📸 Revivez les meilleurs moments en images et restez connectés pour découvrir les prochains temps forts !\n\n#BTP_EHTP #GénieCivil #Construction #Ingénierie #Innovation",
+},
     {
-      id: 5,
-      title: "BIM Software Training",
-      category: "Workshops",
-      date: "November 2024",
-      image: defaultImage,
-      description:
-        "Intensive training session on Building Information Modeling (BIM) software and applications.",
-    },
+  id: 7,
+  title: "Table ronde – Journée Génie Civil 2025",
+  category: "Événements",
+  date: "19 Février 2025",
+  image: roundTableGCDay2025,
+  description:
+    "Dans le cadre de la Journée Génie Civil, le Club BTP EHTP a organisé une table ronde le 19 février 2025 à l’École Hassania des Travaux Publics. Cette rencontre a offert une véritable opportunité de retour d’expérience, permettant à Mme Ouhdid Sanae, M. Zerriq Brahim et Mme Aderkaoui Narjis de partager leur expertise et de débattre sur des enjeux majeurs du secteur.\nUn échange enrichissant marqué par des discussions constructives et l’exploration de pistes d’innovation pour des infrastructures plus performantes et résilientes. Un immense merci aux intervenants et à tous les participants pour leur contribution au succès de cette table ronde.\n\n#BTPEHTP #EHTP #GénieCivil #Infrastructure",
+},
     {
-      id: 6,
-      title: "Sustainability in Construction Seminar",
-      category: "Conferences",
-      date: "October 2024",
-      image: defaultImage,
-      description:
-        "Seminar featuring green building practices and sustainable construction methods.",
-    },
+  id: 8,
+  title: "Visite de chantier – Casablanca",
+  category: "Site Visits",
+  date: "8 Mars 2025",
+  image: chantierCasablanca2025,
+  description:
+    "Le Club BTP EHTP a organisé une visite de chantier à Casablanca le samedi 8 mars 2025, encadrée par le Laboratoire Spécial des Travaux Publics. Les élèves ingénieurs ont découvert un projet de construction d’une résidence comprenant deux sous-sols, un rez-de-chaussée et trois étages, située sur un terrain en pente avec une différence de niveau de six mètres.\nCe chantier, géré par l’entreprise G3C, a permis d'analyser les défis géotechniques et structurels, ainsi que d’échanger directement avec des professionnels du secteur.\n\n#BTPehtp #EHTP #VisiteDeChantier #Construction #Ingénierie",
+},
     {
-      id: 7,
-      title: "Dam Engineering Site Visit",
-      category: "Site Visits",
-      date: "September 2024",
-      image: defaultImage,
-      description:
-        "Exclusive tour of a major dam project, learning about hydraulic structures and water resource management.",
-    },
-    {
-      id: 8,
-      title: "AutoCAD Advanced Techniques",
-      category: "Workshops",
-      date: "September 2024",
-      image: defaultImage,
-      description:
-        "Advanced AutoCAD workshop focusing on civil engineering drawings and 3D modeling.",
-    },
-    {
-      id: 9,
-      title: "Team Building Event",
-      category: "Social Events",
-      date: "August 2024",
-      image: defaultImage,
-      description:
-        "Club members participating in team building activities to strengthen collaboration and networking.",
-    },
+  id: 9,
+  title: "Formation CypeCAD",
+  category: "Workshops",
+  date: "Mars 2025",
+  image: cypecadTraining2025,
+  description:
+    "Le Club BtpEHTP a organisé une session dédiée à CypeCAD, animée par M. Abdelhamid Belmaaris. Cette formation a permis d’explorer la conception, la modélisation et le dimensionnement des structures en génie civil.\nNous remercions M. Abdelhamid Belmaaris pour la qualité de son enseignement, ainsi que tous les participants pour leur engagement et leur implication.\n\n#btpehtp #FormationBTP #cypecad",
+},
+{
+  id: 10,
+  title: "Visite technique du port de Casablanca – Jetée Moulay Youssef",
+  category: "Site Visits",
+  date: "Mai 2025",
+  image: portVisit2025,
+  description:
+    "Le Club BTP EHTP a eu l’honneur d'organiser, le 14 mai 2025, une visite technique du chantier de prolongement de la jetée Moulay Youssef au port de Casablanca, en partenariat avec l’Agence Nationale des Ports et la Direction des Ports et du Domaine Public Maritime. Cette immersion a permis aux membres du club de découvrir les aspects techniques, environnementaux et organisationnels d’un projet portuaire de grande envergure.\n\nCette expérience a été marquée par des échanges enrichissants avec les professionnels du chantier, offrant une meilleure compréhension des défis réels de l’ingénierie maritime.\n\nLe Club BTP EHTP remercie chaleureusement l’ANP et la DPDPM pour leur accueil ainsi que M. Aouiche Ismail pour son encadrement et son accompagnement précieux.\n\n#BTPEHTP #EHTP #ANP #PortDeCasablanca #IngénierieMaritime",
+},
+{
+  id: 11,
+  title: "Conférence : Gestion Participative de l’Eau",
+  category: "Conferences",
+  date: "Juin 2025",
+  image: waterManagementConf,
+  description:
+    "Sous le thème « Gestion Participative de l’Eau : Entre Principes et Pratiques », le Club BTP EHTP a eu l’honneur de recevoir M. Hasnaoui Moulay Driss et M. El Rherari Aissa. Deux experts passionnés qui ont partagé leur vision et leur expérience autour d’une thématique essentielle et d’actualité.\n\nUn moment riche en échanges, permettant d’approfondir la compréhension des enjeux liés à la gestion durable des ressources hydriques.\n\n#btpehtp #conférence",
+},
   ];
 
   const categories = ["All", "Site Visits", "Workshops", "Conferences", "Social Events"];
@@ -168,32 +191,28 @@ export default function GalleryPage() {
 
         {/* Image Dialog */}
         <Dialog open={selectedImage !== null} onOpenChange={() => setSelectedImage(null)}>
-          <DialogContent className="max-w-4xl">
-            {selectedImage !== null && (
-              <>
-                <DialogHeader>
-                  <DialogTitle>{filteredItems[selectedImage].title}</DialogTitle>
-                  <DialogDescription className="flex items-center gap-2 mt-2">
-                    <Badge className="bg-[#FFB700]">{filteredItems[selectedImage].category}</Badge>
-                    <span className="flex items-center gap-1">
-                      <Calendar className="w-4 h-4" />
-                      {filteredItems[selectedImage].date}
-                    </span>
-                  </DialogDescription>
-                </DialogHeader>
+  {selectedImage !== null && (
+    <DialogContent className="max-h-[90vh] overflow-y-auto p-0">
+      <div className="flex flex-col">
+        <img
+  src={filteredItems[selectedImage].image}
+  alt={filteredItems[selectedImage].title}
+  className="max-w-[700px] max-h-[45vh] mx-auto w-full h-auto object-contain rounded-lg"
+/>
 
-                <div className="mt-4">
-                  <ImageWithFallback
-                    src={filteredItems[selectedImage].image || defaultImage}
-                    alt={filteredItems[selectedImage].title}
-                    className="w-full rounded-lg object-cover"
-                  />
-                  <p className="mt-4 text-gray-600">{filteredItems[selectedImage].description}</p>
-                </div>
-              </>
-            )}
-          </DialogContent>
-        </Dialog>
+
+        <div className="p-6 overflow-y-auto">
+          <DialogTitle>{filteredItems[selectedImage].title}</DialogTitle>
+
+          <DialogDescription className="whitespace-pre-line mt-2">
+            {filteredItems[selectedImage].description}
+          </DialogDescription>
+        </div>
+      </div>
+    </DialogContent>
+  )}
+</Dialog>
+
       </div>
     </div>
   );
