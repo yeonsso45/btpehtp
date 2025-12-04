@@ -4,81 +4,107 @@ import { Badge } from "../components/ui/badge";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "../components/ui/dialog";
 import { Calendar } from "lucide-react";
 
+// Imported images
+import sibImage from "../assets/sib-visit.jpg";
+import conferenceImage from "../assets/conferenceImage.jpg";
+// Default fallback image for items without image yet
+const defaultImage = "https://via.placeholder.com/600x400?text=No+Image+Available";
+
 export default function GalleryPage() {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
   const galleryItems = [
     {
       id: 1,
-      title: "Construction Site Visit - Hassan II Bridge",
+      title: "Visite au Salon International du Bâtiment (SIB)",
       category: "Site Visits",
-      date: "March 2025",
-      description: "Students exploring the construction of the new Hassan II Bridge in Casablanca, learning about modern bridge engineering techniques."
+      date: "November 2024",
+      image: sibImage,
+      description:
+        "Le Club BTP EHTP a organisé le 23 novembre 2024 une visite au Salon International du Bâtiment (SIB), offrant aux étudiants l’opportunité de découvrir les innovations du secteur, d’échanger avec des experts et de renforcer leurs connaissances en ingénierie.",
     },
     {
-      id: 2,
-      title: "Concrete Testing Workshop",
-      category: "Workshops",
-      date: "February 2025",
-      description: "Hands-on laboratory session on concrete strength testing and quality control procedures."
-    },
+    id: 2,
+    title: "Conférence : L’innovation en matériaux de construction durables",
+    category: "Conférences",
+    date: "4 Décembre 2024",
+    image: conferenceImage, 
+    description:
+      "Le mercredi 4 décembre, le club BTP EHTP a organisé une conférence enrichissante sous le thème « L’innovation en matériaux de construction durables ». Nous exprimons notre profonde gratitude à nos conférenciers, M. Rguig Mustapha, Mme Dialmy Atar et Mme Wiam Samir, pour leurs interventions inspirantes. Leur expertise a mis en lumière les enjeux et les innovations dans le domaine des matériaux de construction. Merci également à tous les participants pour leur présence et leur engagement. BTP EHTP — we build the world 🧡🖤 #btpehtp #ecolehassaniadestravauxpublics #conférence",
+  },
+
     {
       id: 3,
       title: "Annual Engineering Conference",
       category: "Conferences",
       date: "January 2025",
-      description: "Industry experts and students gathered for our annual conference discussing the future of civil engineering in Morocco."
+      image: defaultImage,
+      description:
+        "Industry experts and students gathered for our annual conference discussing the future of civil engineering in Morocco.",
     },
     {
       id: 4,
       title: "Highway Construction Visit",
       category: "Site Visits",
       date: "December 2024",
-      description: "Field trip to observe highway construction methods and traffic management systems."
+      image: defaultImage,
+      description:
+        "Field trip to observe highway construction methods and traffic management systems.",
     },
     {
       id: 5,
       title: "BIM Software Training",
       category: "Workshops",
       date: "November 2024",
-      description: "Intensive training session on Building Information Modeling (BIM) software and applications."
+      image: defaultImage,
+      description:
+        "Intensive training session on Building Information Modeling (BIM) software and applications.",
     },
     {
       id: 6,
       title: "Sustainability in Construction Seminar",
       category: "Conferences",
       date: "October 2024",
-      description: "Seminar featuring green building practices and sustainable construction methods."
+      image: defaultImage,
+      description:
+        "Seminar featuring green building practices and sustainable construction methods.",
     },
     {
       id: 7,
       title: "Dam Engineering Site Visit",
       category: "Site Visits",
       date: "September 2024",
-      description: "Exclusive tour of a major dam project, learning about hydraulic structures and water resource management."
+      image: defaultImage,
+      description:
+        "Exclusive tour of a major dam project, learning about hydraulic structures and water resource management.",
     },
     {
       id: 8,
       title: "AutoCAD Advanced Techniques",
       category: "Workshops",
       date: "September 2024",
-      description: "Advanced AutoCAD workshop focusing on civil engineering drawings and 3D modeling."
+      image: defaultImage,
+      description:
+        "Advanced AutoCAD workshop focusing on civil engineering drawings and 3D modeling.",
     },
     {
       id: 9,
       title: "Team Building Event",
       category: "Social Events",
       date: "August 2024",
-      description: "Club members participating in team building activities to strengthen collaboration and networking."
+      image: defaultImage,
+      description:
+        "Club members participating in team building activities to strengthen collaboration and networking.",
     },
   ];
 
   const categories = ["All", "Site Visits", "Workshops", "Conferences", "Social Events"];
   const [activeCategory, setActiveCategory] = useState("All");
 
-  const filteredItems = activeCategory === "All" 
-    ? galleryItems 
-    : galleryItems.filter(item => item.category === activeCategory);
+  const filteredItems =
+    activeCategory === "All"
+      ? galleryItems
+      : galleryItems.filter((item) => item.category === activeCategory);
 
   return (
     <div className="min-h-screen pt-16">
@@ -100,8 +126,8 @@ export default function GalleryPage() {
               key={category}
               variant={activeCategory === category ? "default" : "outline"}
               className={`cursor-pointer px-4 py-2 text-sm ${
-                activeCategory === category 
-                  ? "bg-[#FFB700] hover:bg-[#E5A600]" 
+                activeCategory === category
+                  ? "bg-[#FFB700] hover:bg-[#E5A600]"
                   : "hover:bg-gray-100"
               }`}
               onClick={() => setActiveCategory(category)}
@@ -121,7 +147,7 @@ export default function GalleryPage() {
             >
               <div className="relative h-64 overflow-hidden">
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1741105820127-97dd1aaafe87?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb25zdHJ1Y3Rpb24lMjBwcm9qZWN0JTIwZ2FsbGVyeXxlbnwxfHx8fDE3NTk5NDkzMzh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                  src={item.image || defaultImage}
                   alt={item.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                 />
@@ -155,11 +181,12 @@ export default function GalleryPage() {
                     </span>
                   </DialogDescription>
                 </DialogHeader>
+
                 <div className="mt-4">
                   <ImageWithFallback
-                    src="https://images.unsplash.com/photo-1741105820127-97dd1aaafe87?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb25zdHJ1Y3Rpb24lMjBwcm9qZWN0JTIwZ2FsbGVyeXxlbnwxfHx8fDE3NTk5NDkzMzh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                    src={filteredItems[selectedImage].image || defaultImage}
                     alt={filteredItems[selectedImage].title}
-                    className="w-full rounded-lg"
+                    className="w-full rounded-lg object-cover"
                   />
                   <p className="mt-4 text-gray-600">{filteredItems[selectedImage].description}</p>
                 </div>

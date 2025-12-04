@@ -3,6 +3,8 @@ import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { Badge } from "../components/ui/badge";
 import { Mail, Linkedin } from "lucide-react";
 import fatimaImg from "../assets/fatima.jpg";
+import salmaImg from "../assets/salma.jpg";
+import hindImg from "../assets/hind.jpg";
 
 export default function TeamPage() {
   const executiveBoard = [
@@ -11,21 +13,27 @@ export default function TeamPage() {
       role: "President",
       department: "2th year - Civil Engineering ",
       bio: "Leading the club's vision to connect students with industry opportunities.",
-      image:fatimaImg
+      image:fatimaImg,
+      email: "fatimaezzahrae.mahzoume.btp@gmail.com",
+      linkedin: "https://www.linkedin.com/in/fatima"
     },
     {
       name: "Hind Amzil",
       role: "Vice President",
-      department: "42th year - Civil Engineering",
+      department: "2th year - Civil Engineering",
       bio: "Coordinating events and ensuring smooth club operations.",
-      image: "https://images.unsplash.com/photo-1666558889375-798fa96b559a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbmdpbmVlcmluZyUyMHRlYW0lMjBzdHVkZW50c3xlbnwxfHx8fDE3NTk5MjM5NDR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+      image: hindImg,
+      email: "aamzilhind@gmail.com",
+      linkedin: "https://www.linkedin.com/in/hind-amzil-859509252/"
     },
     {
       name: "Salma Abbou",
       role: "Secretary General",
       department: "2th year - Civil Engineering",
       bio: "Managing communications and documentation.",
-      image: "https://images.unsplash.com/photo-1666558889375-798fa96b559a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbmdpbmVlcmluZyUyMHRlYW0lMjBzdHVkZW50c3xlbnwxfHx8fDE3NTk5MjM5NDR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+      image: salmaImg,
+      email: "abbousalma.r@gmail.com",
+      linkedin: "https://www.linkedin.com/in/salma-abbou-78a833338/"
     },
     
     
@@ -104,13 +112,22 @@ export default function TeamPage() {
                 <CardContent>
                   <p className="text-sm text-gray-600 mb-4">{member.bio}</p>
                   <div className="flex justify-center gap-3">
-                    <button className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center hover:bg-[#FFB700] hover:text-white transition-colors">
-                      <Mail className="w-4 h-4" />
-                    </button>
-                    <button className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center hover:bg-[#FFB700] hover:text-white transition-colors">
-                      <Linkedin className="w-4 h-4" />
-                    </button>
-                  </div>
+  <a
+    href={`mailto:${member.email}`}
+    className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center hover:bg-[#FFB700] hover:text-white transition-colors"
+  >
+    <Mail className="w-4 h-4" />
+  </a>
+
+  <a
+    href={member.linkedin}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center hover:bg-[#FFB700] hover:text-white transition-colors"
+  >
+    <Linkedin className="w-4 h-4" />
+  </a>
+</div>
                 </CardContent>
               </Card>
             ))}
