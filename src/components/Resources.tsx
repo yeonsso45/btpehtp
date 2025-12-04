@@ -53,13 +53,17 @@ export function Resources() {
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-gray-500">{resource.items}</span>
                   <Button
-                    variant="ghost"
-                    size="sm"
-                    className="text-[#FFB700] hover:text-[#E5A600] hover:bg-[#FFB700]/10"
-                  >
-                    <Download className="w-4 h-4 mr-2" />
-                    Browse
-                  </Button>
+  asChild
+  variant="ghost"
+  size="sm"
+  className="text-[#FFB700] hover:text-[#E5A600] hover:bg-[#FFB700]/10"
+>
+  <a href="#/resources">
+    <Download className="w-4 h-4 mr-2" />
+    Browse
+  </a>
+</Button>
+
                 </div>
               </div>
             );
